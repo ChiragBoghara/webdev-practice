@@ -1,0 +1,3 @@
+chiragboghara.localhost {
+  reverse_proxy todo-redux-dev:3000
+}

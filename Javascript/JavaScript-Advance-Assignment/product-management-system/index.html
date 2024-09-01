@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Productify</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="add-modal" id="add-modal">
+      <div class="add-modal-header">
+        <div class="title">Add Product</div>
+        <button data-close-button class="close-btn">&times;</button>
+      </div>
+      <div class="err"></div>
+      <div class="add-modal-body">
+       
+          <div class="form-control">
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" />
+          </div>
+          <div class="form-control">
+            <label for="product-manufacturer">Product Manufacturer</label>
+            <input type="text" id="product-manufacturer" />
+          </div>
+          <div class="form-control">
+            <label for="product-description">Product Description</label>
+            <textarea id="product-description"></textarea>
+          </div>
+          <div class="form-control">
+            <label for="product-image">Product Image URL</label>
+            <input type="text" id="product-image" />
+          </div>
+          <div class="form-control">
+            <label for="product-category">Product Category</label>
+            <select class="product-category" id="add-product-category">
+              
+            </select>
+          </div>
+          <div class="form-control">
+            <label for="product-price">Product Price</label>
+            <input type="number" id="product-price" />
+          </div>
+          <div class="form-control">
+            <label for="product-price">Product Stock</label>
+            <input type="number" id="product-stock" />
+          </div>
+          <div class="form-control">
+            <label for="product-price">Product Rating</label>
+            <input type="text" id="product-rating" />
+          </div>
+          <button class="send-btn" data-close-button>Add</button>
+      </div>
+    </div>
+
+    <div class="add-modal" id="edit-modal">
+      <div class="add-modal-header">
+        <div class="title">Edit Product</div>
+        <button data-close-button class="close-btn">&times;</button>
+      </div>
+      <div class="err"></div>
+      <div class="add-modal-body">
+     
+          <div class="form-control">
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" />
+          </div>
+          <div class="form-control">
+            <label for="product-manufacturer">Product Manufacturer</label>
+            <input type="text" id="product-manufacturer" />
+          </div>
+          <div class="form-control">
+            <label for="product-description">Product Description</label>
+            <textarea id="product-description"></textarea>
+          </div>
+          <div class="form-control">
+            <label for="product-image">Product Image URL</label>
+            <input type="text" id="product-image" />
+          </div>
+          <div class="form-control">
+            <label for="product-category">Product Category</label>
+            <select class="product-category" id="edit-product-category">
+              
+            </select>
+          </div>
+          <div class="form-control">
+            <label for="product-price">Product Price</label>
+            <input type="number" id="product-price" />
+          </div>
+          <div class="form-control">
+            <label for="product-price">Product Stock</label>
+            <input type="number" id="product-stock" />
+          </div>
+          <div class="form-control">
+            <label for="product-price">Product Rating</label>
+            <input type="text" id="product-rating" />
+          </div>
+          <div class="hidden" id="edit-product-id"></div>
+          <button type="submit" class="send-btn" data-close-button>Edit</button>
+       
+      </div>
+    </div>
+
+    <div class="add-modal" id="delete-modal">
+      <div class="add-modal-header">
+        <div class="title">Are you sure?</div>
+        <button data-close-button class="close-btn">&times;</button>
+      </div>
+      <div class="add-modal-body">
+        <div class="delete-msg">
+          Do you really want to delete this record? This process cannot be undone.
+        </div>
+        <div class="hidden" id="delete-product-id"></div>
+        <div class="delete-buttons-bar">
+          <button class="cancel-btn" data-close-button>Cancel</button>
+          <button class="delete-btn" data-close-button>Delete</button>
+        </div>
+      </div>
+    </div>
+    <div id="overlay"></div>
+
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxs-store icon"></i>
+        <div class="logo_name">Productify</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-user"></i>
+            <span class="links_name">User</span>
+          </a>
+          <span class="tooltip">User</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-chat"></i>
+            <span class="links_name">Messages</span>
+          </a>
+          <span class="tooltip">Messages</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Analytics</span>
+          </a>
+          <span class="tooltip">Analytics</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">File Manager</span>
+          </a>
+          <span class="tooltip">Files</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cart-alt"></i>
+            <span class="links_name">Order</span>
+          </a>
+          <span class="tooltip">Order</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-heart"></i>
+            <span class="links_name">Saved</span>
+          </a>
+          <span class="tooltip">Saved</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img src="./images/profile.png" alt="profileImg" />
+            <div class="name_job">
+              <div class="name">Chirag Boghara</div>
+              <div class="job">Software Engineer</div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div id="header">
+        <div class="text">Product Management System</div>
+        <div class="header-icons-row">
+          <i class="bx bx-heart icon"></i>
+          <i class="bx bx-cart icon"></i>
+          <i class="bx bx-bell icon"></i>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="edit-container">
+          <div class="first-row">
+            <div class="add-delete">
+              <button class="add-btn" data-modal-target="#add-modal" >
+                <i class="bx bx-plus"></i> &nbsp; Add Product
+              </button>
+            </div>
+            <div class="search-bar">
+              <i class="bx bx-search search-logo"></i>
+              <input type="text" placeholder="Search by Product Name..." class="search-input" id="search-text">
+            </div>
+          </div>
+          <div class="second-row">
+            <div class="filter-container">
+              <p class="filter-title">Sort By:</p>
+              <p>
+                <input type="radio" name="sortby" value="price-low-high" id="price-low-high">
+                <label for="price-low-high">Price : Low-High</label>
+              </p>
+              <p>
+                <input type="radio" name="sortby" value="price-high-low" id="price-high-low">
+                <label for="price-high-low">Price : High-Low</label>
+              </p>
+              <p>
+                <input type="radio" name="sortby" value="stock-low-high" id="stock-low-high">
+                <label for="stock-low-high">Stock : Low-High</label>
+              </p>
+              <p>
+                <input type="radio" name="sortby" value="stock-high-low" id="stock-high-low">
+                <label for="stock-high-low">Stock : High-Low</label>
+              </p>
+              <p>
+                <input type="radio" name="sortby" value="clear-filter" id="clear-filter" checked>
+                <label for="clear-filter">Clear Filters</label>
+              </p>
+            </div>            
+          </div>
+        </div>
+        <div class="products-table">
+          <table class="full-width">      
+            <tr class="thead">
+              <th class="product-name">PRODUCT NAME</th>
+              <th>CATEGORY</th>
+              <th>MANUFACTURER</th>
+              <th>PRICE</th>
+              <th>RATING</th>
+              <th>STOCK</th>
+              <th>ACTIONS</th>
+            </tr>      
+          </table>
+        </div>
+        
+        <div class="pagination-bar">
+          <div id="pagination-text-btn-group">
+
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="footer-main">
+            <div class="shop">
+              <h2>Shop</h2>
+              <a href="#">Jewellery</a>
+              <a href="#">Footwear</a>
+              <a href="#">Groceries</a>
+              <a href="#">Fashion</a>
+              <a href="#">Furniture</a>
+            </div>
+            <div class="company">
+              <h2>Company</h2>
+              <a href="#">About Us</a>
+              <a href="#">Contact Us</a>
+              <a href="#">Shipping Policy</a>
+              <a href="#">Returns & exchange</a>
+              <a href="#">Payments</a>
+            </div>
+            <div class="socials">
+              <h2>Socials</h2>
+              <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="get-in-touch">
+              <h2>Get in touch</h2>
+              <form action="#">
+                <div class="input-wrap">
+                  <input type="text" class="field" placeholder="Name" />
+                </div>
+                <div class="input-wrap">
+                  <input type="email" class="field" placeholder="Email" />
+                </div>
+                <div class="input-wrap">
+                  <input type="number" class="field" placeholder="Phone" />
+                </div>
+                <div class="input-wrap">
+                  <input type="text" class="field" placeholder="Message"/>
+                </div>
+                <div class="send-btn">Send</div>
+            </div>
+          </div>
+          <div class="copyright">
+            <div class="copyright-left">
+              Copyright &copy; 2024 Productify All rights reserved
+            </div>
+            <div class="copyright-right">
+              <a href="#">Terms of service</a>
+              <a href="#">Privacy policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

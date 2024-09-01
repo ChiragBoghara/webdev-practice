@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;900&display=swap");
+
+:root {
+  --dark-btn: #69665c;
+  --light-btn: #b2afa1;
+  --light-yellow: #fff9de;
+  --light-blue: #d1e5f7;
+  --light-green: #daf2d6;
+  --light-red: #ffcece;
+  --light-purple: #d2ceff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Buttons */
+
+.add-btn:hover {
+  cursor: pointer;
+  color: black;
+  transform: scale(1.2);
+  transition: 0.3s ease-in;
+}
+
+.edit-btn {
+  color: rgb(122, 214, 122);
+}
+.edit-btn:hover {
+  cursor: pointer;
+  color: rgb(37, 117, 37);
+}
+
+.delete-btn {
+  color: rgb(238, 104, 104);
+}
+.delete-btn:hover {
+  cursor: pointer;
+  color: rgb(243, 50, 50);
+}
+
+.dark-btn {
+  cursor: pointer;
+  padding: 10px 30px;
+  color: white;
+  background-color: var(--dark-btn);
+  border-radius: 8px;
+}
+
+.transparent-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  color: var(--dark-btn);
+  border-radius: 8px;
+}
+
+.transparent-btn:hover {
+  border: 0.5px solid var(--dark-btn);
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 30px 60px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.navbar .pending {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--light-btn);
+}
+
+.navbar .active {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--dark-btn);
+  text-decoration: underline;
+}
+
+.nav-links {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 300px;
+  margin-left: 60px;
+}
+
+.category {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.category-name {
+  color: var(--dark-btn);
+}
+
+/* Main */
+
+/* ToDo list */
+.todolist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-left: 60px;
+}
+
+.todo {
+  padding: 20px;
+  background-color: var(--light-yellow);
+  margin: 0px 20px 20px 0px;
+  max-width: 350px;
+  box-shadow: 5px 5px 10px rgb(241, 240, 240);
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-title {
+  width: 60%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--dark-btn);
+  margin-bottom: 30px;
+}
+
+.todo-desc {
+  color: var(--light-btn);
+}
+
+.todo-action {
+  width: 30%;
+  justify-content: flex-end;
+  display: flex;
+  gap: 12px;
+}
+
+.todo-footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-tags {
+  display: flex;
+  justify-content: start;
+}
+
+.footer-checkbox{
+  display: flex;
+  gap: 3px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(252, 252, 252);
+  font: inherit;
+  color: var(--light-btn);
+  width: 1.20em;
+  border: 0.15em solid var(--light-btn);
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: var(--dark-btn);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.done-label{
+  color: var(--light-btn);
+}
+/* Modals */
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(92, 88, 88, 0.509);
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 0.5rem;
+  min-width: 40%;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.field-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--dark-btn);
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgba(92, 88, 88, 0.103);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: var(--dark-btn);
+}
+
+.tags-bar {
+  display: flex;
+}
+
+/* About */
+
+.about{
+  margin-left: 60px;
+}
+
+/* Footer */
+
+.footer{
+  margin-top: 15px;
+  padding: 30px 60px;
+  text-align: center;
+  color: var(--light-btn);
+}

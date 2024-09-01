@@ -1,0 +1,22 @@
+*{
+    background-origin: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    flex: 33.33%;
+    max-width: 33.33%;
+}
+
+.column img{
+    padding: 10px;
+    width: 100%;
+}

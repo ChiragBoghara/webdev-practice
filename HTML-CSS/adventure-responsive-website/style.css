@@ -1,0 +1,210 @@
+:root{
+    --dark-pink :  #d90472;
+    --dark-blue: rgb(49, 49, 160);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.pink-button{
+    background-color: var(--dark-pink);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    margin: 30px auto;
+}
+
+.pink-button:hover{
+    background-color: #fff;
+    color: var(--dark-pink);
+}
+
+.bar{
+    width: 200px;
+    height: 8px;
+    border-radius: 5px;
+    margin: 15px auto 45px auto;
+    background-color: var(--dark-pink);
+}
+
+/* navbar */
+
+nav{
+    padding: 0 40px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{
+    padding-right: 40px;
+}
+
+nav a:hover{
+    color: var(--dark-pink);
+}
+
+/* explore section */
+
+.explore{
+    background-color: wheat;
+    height: 120vh;
+    background-image: url("./img/header-bg.png");
+    background-position: center;
+    color: #fff;
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+}
+
+.main-container h1{
+    font-size: 3rem;
+}
+
+.main-container h2{
+    font-size: 2rem;
+}
+
+/* upcoming-events section */
+
+.upcoming-events{
+    height: 100vh;
+    color: var(--dark-blue);
+    padding: 50px;
+}
+
+.upcoming-events h1{
+    font-size: 3rem;
+}
+
+.upcoming-events-header{
+    text-align: center;
+}
+
+.upcoming-events-grid{
+    display: grid;
+    grid-template-areas: "event1 event2";
+    text-align: center;
+    justify-content: space-around;
+}
+
+.upcoming-event1{
+    grid-area: event1;
+    width: 550px;
+}
+
+.upcoming-event2{
+    grid-area: event2;
+    width: 550px;
+}
+
+.upcoming-events-grid h2{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.upcoming-events-grid h4{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: grey;
+}
+
+/* explore-the-world */
+
+.explore-the-world{
+    height: 100vh;
+    background-image: url("img/bg2.png");
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: white;
+}
+
+.explore-the-world h1{
+    font-size: 3rem;
+}
+
+.explore-the-world-content{
+    width: 50%;
+    margin-left: 50px;
+}
+
+/* tours-destination */
+
+.tours-destination{
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tours-destination-content{
+    flex: 1;
+    text-align: left;
+    padding: 20px 40px 20px 0;
+    margin: auto;
+}
+
+.tours-destination-grid{
+    flex: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+img:hover{
+    transform: scale(1.1); 
+}
+
+.tours-destination-bar{
+    width: 200px;
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: var(--dark-pink);
+}
+
+.tours-destination h1{
+    font-size: 3.5rem;
+    color: var(--dark-blue);
+}
+
+
+/* footer */
+
+.footer{
+    height: 160px;
+    background-color: var(--dark-blue);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p{
+    margin: 10px;
+}

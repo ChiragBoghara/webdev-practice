@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>MY BLOG</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo">BLOGGERS.AI</h1>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blogging</a></li>
+          <li><a href="#">Make Money</a></li>
+          <li><a href="#">Internet</a></li>
+        </ul>
+        <img
+          class="menu-btn"
+          src="./assets/images/menu-btn.png"
+          alt="menu button"
+        />
+      </nav>
+    </header>
+    <section class="main-content">
+      <div class="self-container">
+        <h1>MY BLOG</h1>
+        <h3>Welcome to the blog of <span class="username">Unknown</span></h3>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col1"></div>
+        <div class="col2">
+          <div class="profile-container">
+            <div class="profile-container-img"></div>
+            <div class="profile-container-content">
+              <h3>I am <span class="username">Unknown</span></h3>
+              <p>
+                Hey, Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reprehenderi. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Fugit repellat suscipit aspernatur laborum voluptate.
+              </p>
+            </div>
+          </div>
+          <div class="poular-post-container">
+            <div class="poular-post-container-header">
+              <h1>Popular Posts</h1>
+            </div>
+
+            <div class="poular-post-container-content">
+              <div class="pp-row">
+                <div class="pp-col1">
+                  <img
+                    src="./assets/images/mike-scheid-0iqkntLw93A-unsplash.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="pp-col2">
+                  <h3>Lorem</h3>
+                  <h4>Send maitennv iehnbg</h4>
+                </div>
+              </div>
+              <hr />
+              <div class="pp-row">
+                <div class="pp-col1">
+                  <img
+                    src="./assets/images/mike-scheid-0iqkntLw93A-unsplash.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="pp-col2">
+                  <h3>Lorem</h3>
+                  <h4>Send maitennv iehnbg</h4>
+                </div>
+              </div>
+              <hr />
+              <div class="pp-row">
+                <div class="pp-col1">
+                  <img
+                    src="./assets/images/mike-scheid-0iqkntLw93A-unsplash.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="pp-col2">
+                  <h3>Lorem</h3>
+                  <h4>Send maitennv iehnbg</h4>
+                </div>
+              </div>
+              <hr />
+              <div class="pp-row">
+                <div class="pp-col1">
+                  <img
+                    src="./assets/images/mike-scheid-0iqkntLw93A-unsplash.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="pp-col2">
+                  <h3>Lorem</h3>
+                  <h4>Send maitennv iehnbg</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tags-container">
+            <div class="tags-container-header">
+              <h1>Tags</h1>
+            </div>
+            <div class="tags-container-content">
+              <button class="button-custom" onclick="toggle(event)">
+                Travel
+              </button>
+              <button class="button-custom" onclick="toggle(event)">
+                Food
+              </button>
+              <button class="button-custom" onclick="toggle(event)">
+                Entertainment
+              </button>
+              <button class="button-custom" onclick="toggle(event)">
+                Comedy
+              </button>
+              <button class="button-custom" onclick="toggle(event)">
+                Health
+              </button>
+              <button class="button-custom" onclick="toggle(event)">Job</button>
+              <button class="button-custom" onclick="toggle(event)">
+                Business
+              </button>
+              <button class="button-custom" onclick="toggle(event)">
+                India
+              </button>
+              <button class="button-custom" onclick="toggle(event)">
+                World
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 id="book-recommend">HERE ARE A FEW BOOKS THAT I RECOMMEND :</h1>
+      <div class="scrolling-wrapper">
+        <div class="card card1">
+          <img
+            class="icon-image"
+            src="./assets/icons/healthy-lifestyle.png"
+            alt="atomic habits"
+          />
+          <div class="card-content">
+            <h2>Atomic Habits</h2>
+            <p>
+              No matter your goals, Atomic Habits offers a proven framework for
+              improving--every day.
+            </p>
+          </div>
+        </div>
+        <div class="card card2">
+          <img
+            class="icon-image"
+            src="./assets/icons/money.png"
+            alt="rich dad poor dad"
+          />
+          <div class="card-content">
+            <h2>Rich Dad Poor Dad</h2>
+            <p>
+              No matter your goals, Atomic Habits offers a proven framework for
+              improving--every day.
+            </p>
+          </div>
+        </div>
+        <div class="card card3">
+          <img
+            class="icon-image"
+            src="./assets/icons/travelling.png"
+            alt="down under"
+          />
+          <div class="card-content">
+            <h2>Down Under</h2>
+            <p>
+              No matter your goals, Atomic Habits offers a proven framework for
+              improving--every day.
+            </p>
+          </div>
+        </div>
+        <div class="card card4">
+          <img
+            class="icon-image"
+            src="./assets/icons/dumbbell.png"
+            alt="4-hour body"
+          />
+          <div class="card-content">
+            <h2>The 4-Hour Body</h2>
+            <p>
+              No matter your goals, Atomic Habits offers a proven framework for
+              improving--every day.
+            </p>
+          </div>
+        </div>
+        <div class="card card5">
+          <img
+            class="icon-image"
+            src="./assets/icons/leader.png"
+            alt="leaders eat last"
+          />
+          <div class="card-content">
+            <h2>Leaders eat last</h2>
+            <p>
+              No matter your goals, Atomic Habits offers a proven framework for
+              improving--every day.
+            </p>
+          </div>
+        </div>
+        <div class="card card6">
+          <img
+            class="icon-image"
+            src="./assets/icons/conversation.png"
+            alt="talk like ted"
+          />
+          <div class="card-content">
+            <h2>Talk Like TED</h2>
+            <p>
+              No matter your goals, Atomic Habits offers a proven framework for
+              improving--every day.
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="subscribe-container">
+          <img
+            src="./assets/images/hello-removebg-preview.png"
+            alt="hello person"
+          />
+          <h1>HELLO, <span class="username">Unknown</span></h1>
+          <div class="email-box">
+            <h2>Subscribe to my News-letter !!!</h2>
+            <input type="text" name="email" placeholder="Enter your email" />
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-col">
+            <h2>Integrella</h2>
+            <span class="footer-bar"></span>
+            <p>25 Eccleston Pl</p>
+            <p>London SW1W 9NF</p>
+            <p>United Kingdom</p>
+          </div>
+          <div class="footer-col">
+            <h2>Quick Links</h2>
+            <span class="footer-bar"></span>
+            <a href="">About</a>
+            <a href="">Application Development</a>
+            <a href="">Cloud</a>
+            <a href="">Data Integretion</a>
+            <a href="">Web Development</a>
+          </div>
+          <div class="footer-col">
+            <h2>Accrediation</h2>
+            <span class="footer-bar"></span>
+            <img src="./assets/images/Cyber-Essentials-Certified.png" alt="" />
+            <img src="./assets/images/CrownComSvcs.jpg" alt="" />
+          </div>
+          <div class="footer-col">
+            <h2>Contact us</h2>
+            <span class="footer-bar"></span>
+            <p>Phone : 0207 043 0920</p>
+            <p>Email : info@integrella.com</p>
+            <div class="social-links">
+              <a
+                href="https://twitter.com/i/flow/login?redirect_after_login=%2Fintegrellauk"
+                ><img src="assets/images/1a15e320-twitter.png" alt="twitter"
+              /></a>
+              <a href="https://www.linkedin.com/company/integrella "
+                ><img src="assets/images/3cac4241-linkedin.png" alt="linkedin"
+              /></a>
+              <a href="https://www.instagram.com/integrelladotcom/"
+                ><img src="assets/images/6d8d16e3-instagram.png" alt="linkedin"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">Copyright &copy; All rights reserved</div>
+      </footer>
+    </section>
+    <script>
+      const data = [
+        {
+          id: 1,
+          title: "Exploring the Mysteries of Deep Learning Algorithms",
+          description:
+            "Unraveling the Intricacies Behind Cutting-Edge Neural Networks",
+          image: "./assets/images/allyson-beaucourt-m_uSWBJWr0s-unsplash.jpg",
+          content: `The ever-evolving realm of artificial intelligence, deep learning algorithms have emerged as the driving force behind groundbreaking advancements. These sophisticated neural networks mimic the intricate architecture of the human brain, enabling machines to learn and make decisions with unparalleled accuracy. As we embark on this exploration into the depths of deep learning, we'll delve into the convolutional layers, unravel the mysteries of recurrent networks, and witness the transformative power of attention mechanisms. Join us on this captivating journey through the neural pathways of innovation, where algorithms pave the way for a future shaped by the limitless possibilities of artificial intelligence.`,
+          comments: 5,
+        },
+        {
+          id: 2,
+          title: "The Art of Mindful Living",
+          description: "Embracing Tranquility in the Midst of Chaos",
+          image: "./assets/images/kalen-emsley-_LuLiJc1cdo-unsplash.jpg",
+          content: `In the hustle and bustle of modern life, finding moments of serenity becomes an art form. This blog explores the essence of mindful living, delving into practices that cultivate a sense of calm amidst the chaos. From mindfulness meditation to mindful eating, we'll navigate the pathways to a more centered and fulfilling existence. Join us on this journey to discover the transformative power of being present and embracing the art of mindful living.`,
+          comments: 3,
+        },
+        {
+          id: 3,
+          title: "Beyond the Stars: A Journey into the Cosmos",
+          description: "Unveiling the Wonders of Our Expansive Universe",
+          image: "./assets/images/karsten-winegeart-SHKKHRdROiY-unsplash.jpg",
+          content: `Embark on a cosmic odyssey as we traverse the vast expanses of our universe. From distant galaxies to mysterious black holes, this blog unlocks the secrets of the cosmos. Explore the wonders of nebulae, ponder the enigma of dark matter, and marvel at the beauty of celestial bodies. Join us in this celestial adventure, where the mysteries of the universe unfold before your eyes, inviting you to gaze beyond the stars and contemplate the infinite wonders that lie in the cosmic unknown.`,
+          comments: 10,
+        },
+        {
+          id: 4,
+          title: " Serenity Amidst the Urban Symphony:",
+          description: "Finding Calm in the Midst of Life's Symphony",
+          image: "./assets/images/stefan-stefancik--g7axSVst6Y-unsplash.jpg",
+          content: `Amidst the urban symphony where chaos reigns, discovering moments of tranquility becomes an invaluable skill. This blog immerses itself in the exploration of mindful practices, unraveling the threads that weave a tapestry of calm amidst the bustling noise of daily life. From the gentle cadence of mindfulness meditation to the harmonious notes of mindful eating, we embark on a journey to uncover the secrets of a centered and fulfilling existence. Join us as we delve into the transformative power of being present, and embrace the delicate art of mindful living.`,
+          comments: 1,
+        },
+      ];
+
+      const col1 = document.querySelector(".col1");
+
+      data.forEach((blog) => {
+        const blog_cotaniner = document.createElement("div");
+        blog_cotaniner.className = "blog-container";
+
+        const blog_cotaniner_img = document.createElement("div");
+        blog_cotaniner_img.className = "blog-container-img";
+        blog_cotaniner_img.style.backgroundImage = `url(${blog.image})`;
+
+        const blog_cotaniner_content = document.createElement("div");
+        blog_cotaniner_content.className = "blog-container-content";
+
+        blog_cotaniner.appendChild(blog_cotaniner_img);
+        blog_cotaniner.appendChild(blog_cotaniner_content);
+
+        const title = document.createElement("h1");
+        title.textContent = blog.title;
+        const title_description = document.createElement("h3");
+        title_description.textContent = blog.description;
+        const content = document.createElement("p");
+
+        const words = blog.content.split(" ");
+        const totalWords = words.length;
+
+        const firstParagraphWords = Math.round(totalWords * 0.5);
+        const secondParagraphWords = totalWords - firstParagraphWords;
+
+        const firstParagraph = words.slice(0, firstParagraphWords).join(" ");
+        const secondParagraph = words.slice(firstParagraphWords).join(" ");
+
+        const dots = document.createElement("span");
+        dots.setAttribute("id", `dots${blog.id}`);
+        dots.textContent = "...";
+        const more = document.createElement("span");
+        more.setAttribute("id", `more${blog.id}`);
+        more.textContent = secondParagraph;
+
+        content.textContent = firstParagraph + " ";
+        content.appendChild(dots);
+        content.appendChild(more);
+
+        const blog_container_button_box = document.createElement("div");
+        blog_container_button_box.className = "blog-container-button-box";
+
+        const read_nore_btn = document.createElement("button");
+        read_nore_btn.setAttribute(
+          "onclick",
+          `handleReadMore('read-more${blog.id}','dots${blog.id}','more${blog.id}')`
+        );
+
+        read_nore_btn.setAttribute("id", `read-more${blog.id}`);
+        read_nore_btn.className = "read-more-button";
+
+        const buttonText = document.createTextNode("READ MORE \u00A0 \u25BC");
+        read_nore_btn.appendChild(buttonText);
+
+        const comments = document.createElement("p");
+        comments.textContent = `Comments ${blog.comments}`;
+
+        blog_cotaniner_content.appendChild(title);
+        blog_cotaniner_content.appendChild(title_description);
+        blog_cotaniner_content.appendChild(content);
+        blog_cotaniner_content.appendChild(blog_container_button_box);
+
+        blog_container_button_box.appendChild(read_nore_btn);
+        blog_container_button_box.appendChild(comments);
+
+        col1.appendChild(blog_cotaniner);
+      });
+
+      let text;
+      let person = prompt("Please enter your name:", "Chirag Boghara");
+      if (person == null || person == "") {
+        text = "Unknown";
+      } else {
+        text = person;
+      }
+      const classes = document.getElementsByClassName("username");
+      classes[0].innerHTML = text;
+      classes[1].innerHTML = text;
+      classes[2].innerHTML = text;
+
+      function handleNameChange() {
+        const nameField = document.getElementById("name-text-field");
+        const uname = document.getElementsByClassName("username");
+        uname[0].innerHTML = nameField.value;
+        uname[1].innerHTML = nameField.value;
+        uname[2].innerHTML = nameField.value;
+      }
+
+      const menuBtn = document.querySelector(".menu-btn");
+      const navlinks = document.querySelector(".nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        const go_up = document.getElementById("sticky-new-blog");
+        if (menuBtn.src.endsWith("menu-btn.png")) {
+          menuBtn.src = "./assets/icons/delete.png";
+          go_up.style.display = "none";
+        } else {
+          menuBtn.src = "./assets/images/menu-btn.png";
+          go_up.style.display = "inline";
+        }
+        navlinks.classList.toggle("mobile-menu");
+      });
+
+      function handleReadMore(btnId, dotsId, moreId) {
+        var dots = document.getElementById(dotsId);
+        var moreText = document.getElementById(moreId);
+        var btnText = document.getElementById(btnId);
+
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "READ MORE &nbsp; &#9660;";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "READ LESS &nbsp; &#9650;";
+          moreText.style.display = "inline";
+        }
+      }
+
+      function toggle(e) {
+        const target = e.target;
+
+        if ([...target.classList].length == 1) {
+          target.classList.add("active");
+        } else {
+          target.classList.remove("active");
+        }
+      }
+    </script>
+    <a href="#" id="sticky-new-blog">
+      <span class="material-icons"> arrow_upward </span>
+    </a>
+  </body>
+</html>
